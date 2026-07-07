@@ -34,12 +34,25 @@ export default async function handler(req) {
 
     const data = await response.json();
     
+    if (data.error) {
+        // Fetch available models to debug
+        const modelsRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+        const modelsData = await modelsRes.json();
+        const availableModels = modelsData.models ? modelsData.models.map(m => m.name).join(', ') : 'None';
+        return new Response(JSON.stringify({ 
+            error: data.error.message + " | Available models: " + availableModels 
+        }), {
+            status: 400,
+            headers: { 'Content-Type': 'application/json' },
+        });
+    }
+
     return new Response(JSON.stringify(data), {
       status: response.status,
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
+    return new Response(JSON.stringify({ error: 'Internal Server Error', details: error.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
