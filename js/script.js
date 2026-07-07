@@ -228,7 +228,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // AI Chat System Logic
-const GEMINI_API_KEY = "AIzaSyBcww8gpz0fmH1DyGV8W7ZFM5t4pIONUwc"; // <--- ใส่ API Key ของ Google Gemini ที่นี่
 
 // Conversation history
 let chatHistory = [
@@ -310,17 +309,7 @@ async function processAIResponse(question) {
     chatBody.appendChild(typingDiv);
     chatBody.scrollTop = chatBody.scrollHeight;
 
-    if (!GEMINI_API_KEY || GEMINI_API_KEY === "YOUR_API_KEY_HERE") {
-        setTimeout(() => {
-            chatBody.removeChild(typingDiv);
-            const msgDiv = document.createElement('div');
-            msgDiv.className = 'ai-message ai-system';
-            msgDiv.innerHTML = `<p style="margin:0; color: #ff0000; font-weight: bold;">[กรุณาใส่ API Key ในไฟล์ script.js]</p><p style="margin:0; margin-top:8px;">ปัจจุบันระบบยังไม่ได้เชื่อมต่อ API จริงครับ ลองอ่านวิธีรับ Key ฟรีที่ผมเพิ่งแนะนำไปนะครับ</p>`;
-            chatBody.appendChild(msgDiv);
-            chatBody.scrollTop = chatBody.scrollHeight;
-        }, 1000);
-        return;
-    }
+
 
     try {
         // Add user question to history
@@ -329,7 +318,7 @@ async function processAIResponse(question) {
             parts: [{ text: question }]
         });
 
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+        const response = await fetch(`/api/chat`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
