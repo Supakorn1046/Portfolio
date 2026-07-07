@@ -15,7 +15,7 @@ export default async function handler(req) {
     const apiKey = process.env.GEMINI_API_KEY?.trim();
 
     if (!apiKey) {
-      return new Response(JSON.stringify({ error: 'API Key not configured' }), {
+      return new Response(JSON.stringify({ error: { message: 'API Key not configured' } }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' },
       });
@@ -40,7 +40,7 @@ export default async function handler(req) {
         const modelsData = await modelsRes.json();
         const availableModels = modelsData.models ? modelsData.models.map(m => m.name).join(', ') : 'None';
         return new Response(JSON.stringify({ 
-            error: data.error.message + " | Available models: " + availableModels 
+            error: { message: data.error.message + " | Available models: " + availableModels }
         }), {
             status: 400,
             headers: { 'Content-Type': 'application/json' },
@@ -52,7 +52,7 @@ export default async function handler(req) {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: 'Internal Server Error', details: error.message }), {
+    return new Response(JSON.stringify({ error: { message: 'Internal Server Error', details: error.message } }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
