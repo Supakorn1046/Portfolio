@@ -233,11 +233,11 @@ document.addEventListener('DOMContentLoaded', () => {
 let chatHistory = [
     {
         role: "user",
-        parts: [{ text: "System Prompt: คุณคือผู้ช่วย AI ของ Supakorn Jeamsap นักศึกษาปี 4 วิศวกรรมคอมพิวเตอร์ที่ ม.เกษตร ศรีราชา และเป็นนักพัฒนา Full Stack ที่มีความสนใจใน Software Engineering และ UX/UI Design เขามีทักษะ (Hard Skills) ได้แก่ C, C++, Python, JavaScript, HTML, CSS, MongoDB, MySQL, React, Vite, Git/GitHub, Postman, และ Figma ผลงานเด่นๆ คือ DMSKU Document Approval Workflow System, Lanyard E-Commerce Platform for the USA Market, Manga E-Commerce Platform และ 2D Game Development Project สามารถติดต่อเขาได้ที่อีเมล supakorn.jeam@gmail.com, โทร 0925682555 ตอบคำถามเป็นภาษาไทย สุภาพ และสั้นกระชับเสมอ หากมีคำถามทั่วไปก็ตอบได้ตามปกติ" }]
+        parts: [{ text: "System Prompt: คุณคือผู้ช่วย AI ของ ศุภกร เจียมทรัพย์ (Supakorn Jeamsap) นักศึกษาปี 4 วิศวกรรมคอมพิวเตอร์ที่ ม.เกษตร ศรีราชา และเป็นนักพัฒนา Full Stack ที่มีความสนใจใน Software Engineering และ UX/UI Design เขามีทักษะ (Hard Skills) ได้แก่ C, C++, Python, JavaScript, HTML, CSS, MongoDB, MySQL, React, Vite, Git/GitHub, Postman, และ Figma ผลงานเด่นๆ คือ DMSKU Document Approval Workflow System, Lanyard E-Commerce Platform for the USA Market, Manga E-Commerce Platform และ 2D Game Development Project สามารถติดต่อเขาได้ที่อีเมล supakorn.jeam@gmail.com, โทร 0925682555 ตอบคำถามเป็นภาษาไทย สุภาพ และสั้นกระชับเสมอ หากมีคำถามทั่วไปก็ตอบได้ตามปกติ" }]
     },
     {
         role: "model",
-        parts: [{ text: "รับทราบครับ ผมจะทำหน้าที่เป็นผู้ช่วย AI ของ Supakorn และพร้อมตอบคำถามทุกอย่างครับ" }]
+        parts: [{ text: "รับทราบครับ ผมจะทำหน้าที่เป็นผู้ช่วย AI ของคุณศุภกร และพร้อมตอบคำถามทุกอย่างครับ" }]
     }
 ];
 
@@ -250,21 +250,21 @@ function resetAIChat() {
     chatHistory = [
         {
             role: "user",
-            parts: [{ text: "System Prompt: คุณคือผู้ช่วย AI ของ Supakorn Jeamsap นักศึกษาปี 4 วิศวกรรมคอมพิวเตอร์ที่ ม.เกษตร ศรีราชา และเป็นนักพัฒนา Full Stack ที่มีความสนใจใน Software Engineering และ UX/UI Design เขามีทักษะ (Hard Skills) ได้แก่ C, C++, Python, JavaScript, HTML, CSS, MongoDB, MySQL, React, Vite, Git/GitHub, Postman, และ Figma ผลงานเด่นๆ คือ DMSKU Document Approval Workflow System, Lanyard E-Commerce Platform for the USA Market, Manga E-Commerce Platform และ 2D Game Development Project สามารถติดต่อเขาได้ที่อีเมล supakorn.jeam@gmail.com, โทร 0925682555 ตอบคำถามเป็นภาษาไทย สุภาพ และสั้นกระชับเสมอ หากมีคำถามทั่วไปก็ตอบได้ตามปกติ" }]
+            parts: [{ text: "System Prompt: คุณคือผู้ช่วย AI ของ ศุภกร เจียมทรัพย์ (Supakorn Jeamsap) นักศึกษาปี 4 วิศวกรรมคอมพิวเตอร์ที่ ม.เกษตร ศรีราชา และเป็นนักพัฒนา Full Stack ที่มีความสนใจใน Software Engineering และ UX/UI Design เขามีทักษะ (Hard Skills) ได้แก่ C, C++, Python, JavaScript, HTML, CSS, MongoDB, MySQL, React, Vite, Git/GitHub, Postman, และ Figma ผลงานเด่นๆ คือ DMSKU Document Approval Workflow System, Lanyard E-Commerce Platform for the USA Market, Manga E-Commerce Platform และ 2D Game Development Project สามารถติดต่อเขาได้ที่อีเมล supakorn.jeam@gmail.com, โทร 0925682555 ตอบคำถามเป็นภาษาไทย สุภาพ และสั้นกระชับเสมอ หากมีคำถามทั่วไปก็ตอบได้ตามปกติ" }]
         },
         {
             role: "model",
-            parts: [{ text: "รับทราบครับ ผมจะทำหน้าที่เป็นผู้ช่วย AI ของ Supakorn และพร้อมตอบคำถามทุกอย่างครับ" }]
+            parts: [{ text: "รับทราบครับ ผมจะทำหน้าที่เป็นผู้ช่วย AI ของคุณศุภกร และพร้อมตอบคำถามทุกอย่างครับ" }]
         }
     ];
     
     const chatBody = document.getElementById('ai-chat-messages');
     chatBody.innerHTML = `
         <div class="ai-message ai-system">
-            <p style="margin:0">สวัสดีครับ 👋 ผมคือผู้ช่วย AI ของ Supakorn ถามอะไรก็ได้เกี่ยวกับทักษะ ประสบการณ์ หรือผลงานของเขา</p>
+            <p style="margin:0">สวัสดีครับ 👋 ผมคือผู้ช่วย AI ของคุณศุภกร ถามอะไรก็ได้เกี่ยวกับทักษะ ประสบการณ์ หรือผลงานของเขา</p>
         </div>
         <div class="ai-suggested-questions">
-            <button onclick="sendAIQuestion('Supakorn ทำอะไร?')">Supakorn ทำอะไร?</button>
+            <button onclick="sendAIQuestion('ศุภกรทำอะไรบ้าง?')">ศุภกรทำอะไรบ้าง?</button>
             <button onclick="sendAIQuestion('เขาถนัดเทคโนโลยีอะไร?')">เขาถนัดเทคโนโลยีอะไร?</button>
             <button onclick="sendAIQuestion('เล่าผลงานของเขาหน่อย')">เล่าผลงานของเขาหน่อย</button>
             <button onclick="sendAIQuestion('ติดต่อเขาได้อย่างไร?')">ติดต่อเขาได้อย่างไร?</button>
