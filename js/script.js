@@ -30,7 +30,7 @@ const translations = {
         cert_btn_text: "ดูใบรับรอง (CERTIFICATE)",
 
         proj_headline: "ผลงานที่โดดเด่น",
-        proj_sub: "รวมผลงานที่คัดสรร ทุกบรรทัดโค้ดและทุกพิกเซลถูกสร้างสรรค์ขึ้นมาด้วยความตั้งใจ",
+        proj_sub: "รวมโปรเจกต์และผลงานการพัฒนาเว็บไซต์ที่ผ่านมาของผม",
         proj_1_title: "DMSKU Document Approval Workflow System",
         proj_1_desc: "ออกแบบ UX/UI และพัฒนา Frontend ด้วย Svelte 5 สำหรับระบบจัดการและติดตามเอกสาร (Form Builder & Tracking) สร้างระบบจัดการสิทธิ์ผู้ใช้งาน (Permission Management) และพัฒนาระบบจัดรูปแบบหน้ากระดาษ A4 บนเว็บเพื่อรองรับการพิมพ์ที่แม่นยำ",
         proj_2_title: "Lanyard E-Commerce Platform for the USA Market",
@@ -94,7 +94,7 @@ const translations = {
         cert_btn_text: "VIEW CERTIFICATE",
 
         proj_headline: "FEATURED PROJECTS",
-        proj_sub: "A SHOWCASE OF SELECTED WORKS. EVERY LINE OF CODE, EVERY PIXEL, METICULOUSLY CRAFTED.",
+        proj_sub: "A collection of my recent projects and web development work.",
         proj_1_title: "DMSKU Document Approval Workflow System",
         proj_1_desc: "Designed UX/UI and developed the Frontend using Svelte 5 for a document management and tracking system (Form Builder & Tracking). Implemented user permission management and developed a web-based A4 paper formatting system to support precise printing.",
         proj_2_title: "Lanyard E-Commerce Platform for the USA Market",
