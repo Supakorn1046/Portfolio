@@ -29,7 +29,7 @@ const translations = {
         edu_desc: "<strong>เกรดเฉลี่ยสะสม (GPAX):</strong> 3.01<br><strong>รายวิชาที่เกี่ยวข้อง:</strong> Web Application Development, Software Engineering",
         cert_btn_text: "ดูใบรับรอง (CERTIFICATE)",
 
-        proj_headline: "FEATURED PROJECTS",
+        proj_headline: "ผลงานที่โดดเด่น",
         proj_sub: "รวมผลงานที่คัดสรร ทุกบรรทัดโค้ดและทุกพิกเซลถูกสร้างสรรค์ขึ้นมาด้วยความตั้งใจ",
         proj_1_title: "DMSKU Document Approval Workflow System",
         proj_1_desc: "ออกแบบ UX/UI และพัฒนา Frontend ด้วย Svelte 5 สำหรับระบบจัดการและติดตามเอกสาร (Form Builder & Tracking) สร้างระบบจัดการสิทธิ์ผู้ใช้งาน (Permission Management) และพัฒนาระบบจัดรูปแบบหน้ากระดาษ A4 บนเว็บเพื่อรองรับการพิมพ์ที่แม่นยำ",
