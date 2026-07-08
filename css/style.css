@@ -1170,8 +1170,8 @@ nav a:hover {
     font-size: 24px;
     width: 56px;
     height: 56px;
-    background-color: var(--primary-color);
-    color: var(--bg-color);
+    background-color: #ffffff;
+    color: var(--text-color);
     border: 3px solid var(--text-color);
     cursor: pointer;
     box-shadow: 4px 4px 0 var(--text-color);
