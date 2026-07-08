@@ -367,3 +367,21 @@ async function processAIResponse(question) {
         chatBody.scrollTop = chatBody.scrollHeight;
     }
 }
+
+// Scroll to Top Functionality
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollToTopBtn.style.display = "flex";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
