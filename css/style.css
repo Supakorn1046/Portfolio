@@ -4,6 +4,8 @@
   --accent-color: #ff0000;
   --dark-bg: #1a1a1a;
   --dark-text: #e0e0e0;
+  --text-inverse: #ffffff;
+  --text-muted: #666666;
 }
 
 html {
