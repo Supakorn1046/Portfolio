@@ -1,9 +1,47 @@
 :root {
-  --bg-color: #f4f4f4;
-  --text-color: #111111;
-  --accent-color: #ff0000;
-  --dark-bg: #1a1a1a;
-  --dark-text: #e0e0e0;
+  /* OKLCH Primitives */
+  --color-white: oklch(1 0 0);
+  --color-gray-100: oklch(0.96 0 0);
+  --color-gray-200: oklch(0.92 0 0);
+  --color-gray-300: oklch(0.88 0 0);
+  --color-gray-400: oklch(0.7 0 0);
+  --color-gray-500: oklch(0.5 0 0);
+  --color-gray-600: oklch(0.4 0 0);
+  --color-gray-700: oklch(0.35 0 0);
+  --color-gray-800: oklch(0.3 0 0);
+  --color-gray-900: oklch(0.18 0 0);
+  --color-black: oklch(0 0 0);
+  
+  --color-brand-red: oklch(0.63 0.25 29);
+  --color-status-green: oklch(0.87 0.29 142);
+
+  /* Semantic Tokens (Light) */
+  --bg-color: var(--color-gray-100);
+  --text-color: var(--color-gray-900);
+  --accent-color: var(--color-brand-red);
+  
+  --surface-default: var(--color-white);
+  --surface-alt: var(--color-gray-200);
+  --surface-placeholder: var(--color-gray-800);
+  
+  --text-inverse: var(--color-white);
+  --text-muted: var(--color-gray-600);
+  
+  --status-indicator: var(--color-status-green);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--color-black);
+    --text-color: var(--color-gray-200);
+    
+    --surface-default: var(--color-gray-900);
+    --surface-alt: var(--color-gray-800);
+    --surface-placeholder: var(--color-gray-800);
+    
+    --text-inverse: var(--color-white);
+    --text-muted: var(--color-gray-400);
+  }
 }
 
 html {
@@ -157,7 +195,7 @@ nav a:hover {
   object-fit: cover;
   transition: transform 0.3s ease;
   z-index: 1;
-  background-color: #ddd; /* Fallback if image doesn't load */
+  background-color: var(--surface-alt); /* Fallback if image doesn't load */
   border: 3px solid var(--text-color);
   box-shadow: 8px 8px 0 var(--text-color);
 }
@@ -270,7 +308,7 @@ nav a:hover {
 }
 
 .project-img-box {
-  background: #333;
+  background: var(--surface-placeholder);
   aspect-ratio: 16/9;
   position: relative;
   cursor: pointer;
@@ -281,7 +319,7 @@ nav a:hover {
 }
 .project-img-box span {
   position: absolute;
-  color: #fff;
+  color: var(--text-inverse);
   font-family: 'Arial Black', Arial, sans-serif;
   font-size: 1.2rem;
   padding: 0 16px;
@@ -414,13 +452,13 @@ nav a:hover {
 .project-card {
   position: relative;
   overflow: hidden;
-  background: #333;
+  background: var(--surface-placeholder);
   cursor: pointer;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--text-inverse);
   text-align: center;
   padding: 16px;
 }
@@ -503,7 +541,7 @@ nav a:hover {
     font-family: 'Arial Black', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     margin: 0 0 16px 0;
-    color: #fff;
+    color: var(--text-inverse);
     border-bottom: 2px solid var(--text-color);
     padding-bottom: 8px;
 }
@@ -590,7 +628,7 @@ nav a:hover {
 .contact-desc {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2rem;
-    color: #444;
+    color: var(--text-muted);
     max-width: 800px;
     margin-top: 24px;
 }
@@ -630,7 +668,7 @@ nav a:hover {
 .link-url {
     font-family: 'Courier New', Courier, monospace;
     font-size: clamp(0.7rem, 1.5vw, 1rem);
-    color: #888;
+    color: var(--text-muted);
     letter-spacing: 0;
     font-weight: normal;
     text-transform: lowercase;
@@ -642,7 +680,7 @@ nav a:hover {
     padding-left: 64px;
 }
 .contact-link-item:hover .link-url {
-    color: #fff;
+    color: var(--text-inverse);
 }
 .contact-link-item:last-child {
     border-bottom: none;
@@ -680,7 +718,7 @@ nav a:hover {
     background-color: var(--text-color);
 }
 .dark-label {
-    color: #888;
+    color: var(--text-muted);
 }
 .dark-value {
     color: var(--bg-color) !important;
@@ -690,7 +728,7 @@ nav a:hover {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     font-weight: bold;
-    color: #555;
+    color: var(--text-muted);
     display: block;
     margin-bottom: 8px;
 }
@@ -789,7 +827,7 @@ nav a:hover {
   font-weight: bold;
 }
 .modal-close:hover {
-  color: #fff;
+  color: var(--text-inverse);
 }
 
 /* Scroll Animation */
@@ -879,7 +917,7 @@ nav a:hover {
 }
 .ai-logo {
     background: var(--accent-color);
-    color: #fff;
+    color: var(--text-inverse);
     font-weight: 900;
     width: 44px;
     height: 44px;
@@ -887,7 +925,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    border: 2px solid #fff;
+    border: 2px solid var(--text-inverse);
     border-radius: 50%;
     text-transform: uppercase;
 }
@@ -901,7 +939,7 @@ nav a:hover {
 .ai-header-info p {
     margin: 4px 0 0 0;
     font-size: 13px;
-    color: #ccc;
+    color: var(--text-muted);
     display: flex;
     align-items: center;
     gap: 6px;
@@ -909,10 +947,10 @@ nav a:hover {
 .status-dot-ai {
     width: 10px;
     height: 10px;
-    background-color: #00ff00;
+    background-color: var(--status-indicator);
     border-radius: 50%;
     display: inline-block;
-    box-shadow: 0 0 8px #00ff00;
+    box-shadow: 0 0 8px var(--status-indicator);
 }
 .ai-header-actions {
     position: absolute;
@@ -926,7 +964,7 @@ nav a:hover {
 .ai-action-btn {
     background: none;
     border: none;
-    color: #fff;
+    color: var(--text-inverse);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -949,14 +987,14 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    background: #fdfdfd;
+    background: var(--surface-default);
 }
 /* Custom Scrollbar */
 .ai-chat-body::-webkit-scrollbar {
     width: 8px;
 }
 .ai-chat-body::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: var(--surface-alt); 
     border-left: 2px solid var(--text-color);
 }
 .ai-chat-body::-webkit-scrollbar-thumb {
@@ -973,7 +1011,7 @@ nav a:hover {
     position: relative;
 }
 .ai-system {
-    background-color: #fff;
+    background-color: var(--text-inverse);
     color: var(--text-color);
     align-self: flex-start;
     border-radius: 16px 16px 16px 0;
@@ -981,7 +1019,7 @@ nav a:hover {
 }
 .ai-user {
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--text-inverse);
     align-self: flex-end;
     border-radius: 16px 16px 0 16px;
     box-shadow: -4px 4px 0 var(--text-color);
@@ -994,7 +1032,7 @@ nav a:hover {
     margin-top: 8px;
 }
 .ai-suggested-questions button {
-    background: #fff;
+    background: var(--surface-default);
     border: 3px solid var(--text-color);
     padding: 10px 16px;
     font-size: 14px;
@@ -1019,7 +1057,7 @@ nav a:hover {
 .ai-chat-input-area {
     padding: 20px;
     border-top: 4px solid var(--text-color);
-    background: #fff;
+    background: var(--surface-default);
 }
 .ai-chat-input-area form {
     display: flex;
@@ -1041,7 +1079,7 @@ nav a:hover {
 }
 .ai-send-btn {
     background: var(--text-color);
-    color: #fff;
+    color: var(--text-inverse);
     border: 3px solid var(--text-color);
     width: 52px;
     display: flex;
@@ -1063,7 +1101,7 @@ nav a:hover {
 .ai-chat-footer {
     text-align: center;
     font-size: 11px;
-    color: #888;
+    color: var(--text-muted);
     margin-top: 12px;
     font-weight: 500;
 }
@@ -1170,7 +1208,7 @@ nav a:hover {
     font-size: 24px;
     width: 56px;
     height: 56px;
-    background-color: #ffffff;
+    background-color: var(--text-inverse)fff;
     color: var(--text-color);
     border: 3px solid var(--text-color);
     cursor: pointer;
@@ -1193,3 +1231,4 @@ nav a:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 var(--text-color);
 }
+
