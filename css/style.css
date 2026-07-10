@@ -707,7 +707,7 @@ nav a:hover {
 .link-url {
     font-family: 'Courier New', Courier, monospace;
     font-size: clamp(0.7rem, 1.5vw, 1rem);
-    color: var(--text-muted);
+    color: #ffffff;
     letter-spacing: 0;
     font-weight: normal;
     text-transform: lowercase;
