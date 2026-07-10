@@ -19,7 +19,7 @@
             <a href="#projects" data-i18n="nav_proj">WORKS</a>
             <a href="#achievements" data-i18n="nav_achieve">CERTIFICATES</a>
             <a href="#contact" data-i18n="nav_contact">CONTACT</a>
-            <button id="langToggleBtn" onclick="toggleLanguage()">EN</button>
+            <button id="langToggleBtn" aria-label="Toggle Language" onclick="toggleLanguage()">EN</button>
         </nav>
     </header>
 
@@ -30,10 +30,10 @@
         </div>
 
         <!-- Floating Images -->
-        <img src="assets/images/kudms2.PNG" class="floating-img float-1" alt="" onerror="this.style.display='none'">
-        <img src="assets/images/lanyard2.PNG" class="floating-img float-2" alt="" onerror="this.style.display='none'">
-        <img src="assets/images/manga.PNG" class="floating-img float-3" alt="" onerror="this.style.display='none'">
-        <img src="assets/images/2d3.PNG" class="floating-img float-4" alt="" onerror="this.style.display='none'">
+        <img src="assets/images/kudms2.PNG" class="floating-img float-1" alt="" aria-hidden="true" onerror="this.style.display='none'">
+        <img src="assets/images/lanyard2.PNG" class="floating-img float-2" alt="" aria-hidden="true" onerror="this.style.display='none'">
+        <img src="assets/images/manga.PNG" class="floating-img float-3" alt="" aria-hidden="true" onerror="this.style.display='none'">
+        <img src="assets/images/2d3.PNG" class="floating-img float-4" alt="" aria-hidden="true" onerror="this.style.display='none'">
     </section>
 
     <!-- Marquee Ticker -->
@@ -129,20 +129,18 @@
                 <div class="project-img-box"
                     onclick="openImageViewer(['assets/images/kudms1.png', 'assets/images/kudms2.PNG', 'assets/images/kudms3.PNG', 'assets/images/kudms4.PNG', 'assets/images/kudms5.PNG', 'assets/images/kudms6.PNG'])">
                     <span data-i18n="proj_1_title">DMSKU Document Approval Workflow System</span>
-                    <img src="assets/images/kudms1.png" alt="Project 1" onerror="this.style.display='none'">
+                    <img src="assets/images/kudms1.png" alt="DMSKU Document Approval Workflow System interface" loading="lazy" onerror="this.style.display='none'">
                 </div>
                 <div class="project-info">
                     <h3 data-i18n="proj_1_title">DMSKU Document Approval Workflow System</h3>
-                    <p data-i18n="proj_1_desc">เธญเธญเธเนเธเธ UX/UI เนเธฅเธฐเธเธฑเธ’เธเธฒ Frontend เธ”เนเธงเธข Svelte 5
-                        เธชเธณเธซเธฃเธฑเธเธฃเธฐเธเธเธเธฑเธ”เธเธฒเธฃเนเธฅเธฐเธ•เธดเธ”เธ•เธฒเธกเน€เธญเธเธชเธฒเธฃ (Form Builder & Tracking) เธชเธฃเนเธฒเธเธฃเธฐเธเธเธเธฑเธ”เธเธฒเธฃเธชเธดเธ—เธเธดเนเธเธนเนเนเธเนเธเธฒเธ
-                        (Permission Management) เนเธฅเธฐเธเธฑเธ’เธเธฒเธฃเธฐเธเธเธเธฑเธ”เธฃเธนเธเนเธเธเธซเธเนเธฒเธเธฃเธฐเธ”เธฒเธฉ A4 เธเธเน€เธงเนเธเน€เธเธทเนเธญเธฃเธญเธเธฃเธฑเธเธเธฒเธฃเธเธดเธกเธเนเธ—เธตเนเนเธกเนเธเธขเธณ
+                    <p data-i18n="proj_1_desc">ออกแบบ UX/UI และพัฒนา Frontend ด้วย Svelte 5 สำหรับระบบจัดการและติดตามเอกสาร (Form Builder & Tracking) สร้างระบบจัดการสิทธิ์ผู้ใช้งาน (Permission Management) และพัฒนาระบบจัดการรูปแบบหน้ากระดาษ A4 บนเว็บเพื่อรองรับการพิมพ์ที่แม่นยำ
                     </p>
                     <div class="project-actions">
                         <button class="btn-brutal"
                             onclick="openImageViewer(['assets/images/kudms1.png', 'assets/images/kudms2.PNG', 'assets/images/kudms3.PNG', 'assets/images/kudms4.PNG', 'assets/images/kudms5.PNG', 'assets/images/kudms6.PNG'])"
                             data-i18n="btn_view_imgs">VIEW IMAGES</button>
                         <a href="https://uat-dmsku.compaxtech.com/" target="_blank" class="btn-brutal"
-                            data-i18n="btn_view_site">VISIT SITE โ’</a>
+                            data-i18n="btn_view_site">VISIT SITE →</a>
                     </div>
                 </div>
             </div>
@@ -151,13 +149,11 @@
                 <div class="project-img-box"
                     onclick="openImageViewer(['assets/images/lanyard.PNG', 'assets/images/lanyard1.PNG', 'assets/images/lanyard2.PNG', 'assets/images/lanyard3.png', 'assets/images/lanyard4.png', 'assets/images/lanyard5.png', 'assets/images/lanyard6.png', 'assets/images/lanyard7.png'])">
                     <span data-i18n="proj_2_title">Lanyard E-Commerce Platform for the USA Market</span>
-                    <img src="assets/images/lanyard.PNG" alt="Project 2" onerror="this.style.display='none'">
+                    <img src="assets/images/lanyard.PNG" alt="Lanyard E-Commerce Platform interface" loading="lazy" onerror="this.style.display='none'">
                 </div>
                 <div class="project-info" style="direction: ltr;">
                     <h3 data-i18n="proj_2_title">Lanyard E-Commerce Platform for the USA Market</h3>
-                    <p data-i18n="proj_2_desc">เธงเธดเธเธฑเธขเน€เธงเนเธเนเธเธ•เนเธเธนเนเนเธเนเธเนเธฅเธฐเธญเธญเธเนเธเธ UX/UI เธเนเธฒเธ Figma เน€เธเธทเนเธญเธ•เธญเธเนเธเธ—เธขเนเธ•เธฅเธฒเธ”เธญเน€เธกเธฃเธดเธเธฒ
-                        เธเธฑเธ’เธเธฒเธซเธเนเธฒเน€เธงเนเธ Responsive เธ”เนเธงเธข HTML, CSS, Bootstrap 5 เนเธฅเธฐ JavaScript เธเธณเนเธเนเธ”เธเธถเนเธเนเธเนเธเธฒเธเธเธฃเธดเธเธเนเธฒเธ
-                        Vercel</p>
+                    <p data-i18n="proj_2_desc">วิจัยเว็บไซต์คู่แข่งและออกแบบ UX/UI ผ่าน Figma เพื่อตอบโจทย์ตลาดอเมริกา พัฒนาหน้าเว็บ Responsive ด้วย HTML, CSS, Bootstrap 5 และ JavaScript นำโค้ดขึ้นใช้งานจริงผ่าน Vercel</p>
                     <div class="project-actions">
                         <button class="btn-brutal"
                             onclick="openImageViewer(['assets/images/lanyard.PNG', 'assets/images/lanyard1.PNG', 'assets/images/lanyard2.PNG', 'assets/images/lanyard3.png', 'assets/images/lanyard4.png', 'assets/images/lanyard5.png', 'assets/images/lanyard6.png', 'assets/images/lanyard7.png'])"
@@ -165,7 +161,7 @@
                         <a href="https://www.figma.com/proto/HJ5PGBAosronJEXUbp9U4p/USA-Lanyard?node-id=1-2&starting-point-node-id=1%3A2&t=HWpNEcKsFkwnwmWp-1"
                             target="_blank" class="btn-brutal" data-i18n="btn_view_proto">VIEW PROTOTYPE (Figma)</a>
                         <a href="https://lanyard-rust-omega.vercel.app/" target="_blank" class="btn-brutal"
-                            data-i18n="btn_view_site">VISIT SITE โ’</a>
+                            data-i18n="btn_view_site">VISIT SITE →</a>
                     </div>
                 </div>
             </div>
@@ -174,19 +170,17 @@
                 <div class="project-img-box"
                     onclick="openImageViewer(['assets/images/manga.PNG', 'assets/images/manga1.PNG', 'assets/images/manga2.PNG', 'assets/images/manga3.PNG', 'assets/images/manga4.PNG', 'assets/images/manga5.PNG', 'assets/images/manga6.PNG', 'assets/images/manga7.PNG'])">
                     <span data-i18n="proj_3_title">Manga E-Commerce Platform</span>
-                    <img src="assets/images/manga.PNG" alt="Project 3" onerror="this.style.display='none'">
+                    <img src="assets/images/manga.PNG" alt="Manga E-Commerce Platform interface" loading="lazy" onerror="this.style.display='none'">
                 </div>
                 <div class="project-info">
                     <h3 data-i18n="proj_3_title">Manga E-Commerce Platform</h3>
-                    <p data-i18n="proj_3_desc">เธเธฑเธ’เธเธฒเธฃเธฐเธเธเธญเธตเธเธญเธกเน€เธกเธดเธฃเนเธเน€เธ•เนเธกเธฃเธนเธเนเธเธเธ”เนเธงเธข MERN Stack (MongoDB, Express, React,
-                        Node.js) เธเธฃเธญเธเธเธฅเธธเธกเธฃเธฐเธเธเธ•เธฃเธฐเธเธฃเนเธฒเธชเธดเธเธเนเธฒ เธเธฒเธฃเธชเธฑเนเธเธเธทเนเธญ เนเธฅเธฐเธฃเธฐเธเธเธเธฑเธ”เธเธฒเธฃเธซเธฅเธฑเธเธเนเธฒเธ (Admin Dashboard)
-                        เธชเธณเธซเธฃเธฑเธเธเธฑเธ”เธเธฒเธฃเธเนเธญเธกเธนเธฅเธเธนเนเนเธเนเนเธฅเธฐเธชเธดเธเธเนเธฒ</p>
+                    <p data-i18n="proj_3_desc">พัฒนาระบบอีคอมเมิร์ซเต็มรูปแบบด้วย MERN Stack (MongoDB, Express, React, Node.js) ครอบคลุมระบบตะกร้าสินค้า การสั่งซื้อ และระบบจัดการหลังบ้าน (Admin Dashboard) สำหรับจัดการข้อมูลผู้ใช้และสินค้า</p>
                     <div class="project-actions">
                         <button class="btn-brutal"
                             onclick="openImageViewer(['assets/images/manga.PNG', 'assets/images/manga1.PNG', 'assets/images/manga2.PNG', 'assets/images/manga3.PNG', 'assets/images/manga4.PNG', 'assets/images/manga5.PNG', 'assets/images/manga6.PNG', 'assets/images/manga7.PNG'])"
                             data-i18n="btn_view_imgs">VIEW IMAGES</button>
                         <a href="https://manga-x-escy.vercel.app/" target="_blank" class="btn-brutal"
-                            data-i18n="btn_view_site">VISIT SITE โ’</a>
+                            data-i18n="btn_view_site">VISIT SITE →</a>
                     </div>
                 </div>
             </div>
@@ -194,7 +188,7 @@
             <div class="project-item" style="direction: rtl;">
                 <div class="project-img-box" onclick="openImageViewer(['assets/images/2d.PNG', 'assets/images/2d2.PNG', 'assets/images/2d3.PNG', 'assets/images/2d4.PNG'])">
                     <span data-i18n="proj_4_title">2D Game Development Project</span>
-                    <img src="assets/images/2d.PNG" alt="Project 4" onerror="this.style.display='none'">
+                    <img src="assets/images/2d.PNG" alt="2D Game Development Project screenshot" loading="lazy" onerror="this.style.display='none'">
                 </div>
                 <div class="project-info" style="direction: ltr;">
                     <h3 data-i18n="proj_4_title">2D Game Development Project</h3>
@@ -212,7 +206,7 @@
             <div class="project-item">
                 <div class="project-img-box" onclick="openImageViewer(['assets/images/compax.PNG', 'assets/images/compax2.PNG', 'assets/images/compax3.PNG', 'assets/images/compax4.PNG'])">
                     <span data-i18n="proj_5_title">CompaxTech - Software Development Agency</span>
-                    <img src="assets/images/compax.PNG" alt="Project 5" onerror="this.style.display='none'">
+                    <img src="assets/images/compax.PNG" alt="CompaxTech Software Development Agency website design" loading="lazy" onerror="this.style.display='none'">
                 </div>
                 <div class="project-info">
                     <h3 data-i18n="proj_5_title">CompaxTech - Software Development Agency</h3>
@@ -242,7 +236,7 @@
                     style="margin: 0 auto; border: 4px solid var(--text-color); box-shadow: 12px 12px 0 var(--text-color); background: #fff; width: 100%;">
                     <h3 style="background: var(--text-color); color: var(--bg-color); margin: 0; padding: 12px; text-align: center; font-family: 'Arial Black', sans-serif;"
                         data-i18n="achieve_1">CERTIFICATE</h3>
-                    <img src="assets/images/youandearth.PNG" alt="Certificate of Internship"
+                    <img src="assets/images/youandearth.PNG" alt="Certificate of Internship at YouAndEarth" loading="lazy"
                         style="width: 100%; display: block; cursor: zoom-in;"
                         onclick="openImageViewer(['assets/images/youandearth.PNG'])">
                 </div>
@@ -251,7 +245,7 @@
                     style="margin: 0 auto; border: 4px solid var(--text-color); box-shadow: 12px 12px 0 var(--text-color); background: #fff; width: 100%;">
                     <h3 style="background: var(--text-color); color: var(--bg-color); margin: 0; padding: 12px; text-align: center; font-family: 'Arial Black', sans-serif;"
                         data-i18n="achieve_2">ACTIVITY</h3>
-                    <img src="assets/images/codebattle.png" alt="Code Battle"
+                    <img src="assets/images/codebattle.png" alt="Code Battle Certificate of Participation" loading="lazy"
                         style="width: 100%; display: block; cursor: zoom-in; object-fit: cover; aspect-ratio: 4/3;"
                         onclick="openImageViewer(['assets/images/codebattle.png', 'assets/images/codebattle2.jpg'])">
                 </div>
@@ -330,22 +324,22 @@
         <button class="nav-btn next-btn" onclick="nextImage(event)">&#10095;</button>
     </div>
     <!-- AI Chat System -->
-    <button id="ai-chat-btn" onclick="toggleAIChat()">
+    <button id="ai-chat-btn" aria-label="Open AI Assistant" onclick="toggleAIChat()">
         <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
     </button>
 
-        <div id="ai-chat-window" class="hidden">
-                <div class="ai-chat-header">
+    <div id="ai-chat-window" class="hidden">
+        <div class="ai-chat-header">
             <div class="ai-logo">SJ</div>
             <div class="ai-header-info">
                 <h4>ถามเกี่ยวกับ SUPAKORN</h4>
                 <p><span class="status-dot-ai"></span> ผู้ช่วย AI &bull; ตอบทันที</p>
             </div>
             <div class="ai-header-actions">
-                <button class="ai-action-btn" onclick="resetAIChat()" title="เริ่มแชทใหม่ (Reset)">
+                <button class="ai-action-btn" aria-label="Reset Chat" onclick="resetAIChat()" title="รีเซ็ต (Reset)">
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
                 </button>
-                <button class="ai-action-btn" onclick="toggleAIChat()" title="ปิด (Close)" style="font-size: 24px; line-height: 1;">✕</button>
+                <button class="ai-action-btn" aria-label="Close Chat" onclick="toggleAIChat()" title="ปิด (Close)" style="font-size: 24px; line-height: 1;">✕</button>
             </div>
         </div>
         <div class="ai-chat-body" id="ai-chat-messages">
@@ -361,8 +355,8 @@
         </div>
         <div class="ai-chat-input-area">
             <form onsubmit="handleAIChatSubmit(event)">
-                <input type="text" id="ai-chat-input" placeholder="พิมพ์ข้อความ..." autocomplete="off">
-                <button type="submit" class="ai-send-btn">
+                <input type="text" id="ai-chat-input" aria-label="Ask the AI Assistant" placeholder="พิมพ์ข้อความ..." autocomplete="off">
+                <button type="submit" aria-label="Send Message" class="ai-send-btn">
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                 </button>
             </form>
@@ -372,7 +366,7 @@
         </div>
     </div>
 
-    <button id="scrollToTopBtn" onclick="scrollToTop()" title="Go to top">↑</button>
+    <button id="scrollToTopBtn" aria-label="Scroll to Top" onclick="scrollToTop()" title="Go to top">↑</button>
 
     <script src="js/script.js"></script>
 </body>

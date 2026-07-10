@@ -371,11 +371,18 @@ async function processAIResponse(question) {
 // Scroll to Top Functionality
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
+let isScrolling = false;
 window.addEventListener("scroll", () => {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollToTopBtn.style.display = "flex";
-    } else {
-        scrollToTopBtn.style.display = "none";
+    if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollToTopBtn.style.display = "flex";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+            isScrolling = false;
+        });
+        isScrolling = true;
     }
 });
 
