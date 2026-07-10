@@ -324,10 +324,13 @@ nav a:hover {
 }
 
 .btn-brutal {
-  display: inline-block;
-  background: transparent;
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 3px solid var(--text-color);
+  box-shadow: 4px 4px 0 var(--accent-color);
   padding: 12px 24px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1rem;
@@ -335,11 +338,17 @@ nav a:hover {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .btn-brutal:hover {
-  background: var(--accent-color);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--accent-color);
+  background-color: var(--accent-color);
   color: var(--bg-color);
+}
+.btn-brutal:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 /* Marquee / Ticker */
