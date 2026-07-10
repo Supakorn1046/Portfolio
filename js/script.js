@@ -167,23 +167,63 @@ const viewerImage = document.getElementById('viewerImage');
 let currentImageList = [];
 let currentImageIndex = 0;
 
-window.openImageViewer = function (imageList, startIndex = 0) {
+window.openImageViewer = function (imageList, startIndex = 0, event = null) {
     if (!imageViewer || !viewerImage || !imageList || imageList.length === 0) return;
 
     currentImageList = imageList;
     currentImageIndex = startIndex;
-    updateModalView();
-    imageViewer.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    
+    let targetImg = null;
+    if (event && event.currentTarget) {
+        targetImg = event.currentTarget.querySelector('img');
+        if (!targetImg && event.currentTarget.tagName === 'IMG') {
+            targetImg = event.currentTarget;
+        }
+    }
+
+    const openModal = () => {
+        updateModalView();
+        imageViewer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (targetImg) targetImg.style.viewTransitionName = '';
+        if (viewerImage) viewerImage.style.viewTransitionName = '';
+    };
+
+    if (document.startViewTransition && targetImg) {
+        targetImg.style.viewTransitionName = 'project-image-transition';
+        viewerImage.style.viewTransitionName = 'project-image-transition';
+        document.startViewTransition(() => openModal());
+    } else {
+        openModal();
+    }
 };
 
 window.closeImageViewer = function (e) {
     if (e && (e.target.id === 'viewerImage' || e.target.classList.contains('nav-btn'))) {
         return;
     }
-    if (imageViewer) {
+    if (!imageViewer) return;
+
+    const closeModal = () => {
         imageViewer.classList.remove('active');
         document.body.style.overflow = 'auto';
+    };
+
+    if (document.startViewTransition) {
+        const currentSrc = currentImageList[currentImageIndex];
+        const targetImg = document.querySelector(`img[src$="${currentSrc.split('/').pop()}"]:not(#viewerImage)`);
+        
+        if (targetImg) targetImg.style.viewTransitionName = 'project-image-transition';
+        if (viewerImage) viewerImage.style.viewTransitionName = 'project-image-transition';
+        
+        const transition = document.startViewTransition(() => closeModal());
+        
+        transition.finished.then(() => {
+            if (targetImg) targetImg.style.viewTransitionName = '';
+            if (viewerImage) viewerImage.style.viewTransitionName = '';
+        });
+    } else {
+        closeModal();
     }
 };
 
@@ -191,7 +231,11 @@ window.nextImage = function (e) {
     if (e) e.stopPropagation();
     if (currentImageList.length > 0) {
         currentImageIndex = (currentImageIndex + 1) % currentImageList.length;
-        updateModalView();
+        if (document.startViewTransition) {
+            document.startViewTransition(() => updateModalView());
+        } else {
+            updateModalView();
+        }
     }
 };
 
@@ -199,7 +243,11 @@ window.prevImage = function (e) {
     if (e) e.stopPropagation();
     if (currentImageList.length > 0) {
         currentImageIndex = (currentImageIndex - 1 + currentImageList.length) % currentImageList.length;
-        updateModalView();
+        if (document.startViewTransition) {
+            document.startViewTransition(() => updateModalView());
+        } else {
+            updateModalView();
+        }
     }
 };
 

@@ -1271,3 +1271,11 @@ nav a:hover {
     box-shadow: 2px 2px 0 var(--text-color);
 }
 
+
+/* View Transitions Overdrive */
+::view-transition-old(project-image-transition),
+::view-transition-new(project-image-transition) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
