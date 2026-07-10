@@ -767,7 +767,7 @@ nav a:hover {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     font-weight: bold;
-    color: var(--text-muted);
+    color: var(--text-color);
     display: block;
     margin-bottom: 8px;
 }
