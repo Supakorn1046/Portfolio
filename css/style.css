@@ -1,47 +1,9 @@
 :root {
-  /* OKLCH Primitives */
-  --color-white: oklch(1 0 0);
-  --color-gray-100: oklch(0.96 0 0);
-  --color-gray-200: oklch(0.92 0 0);
-  --color-gray-300: oklch(0.88 0 0);
-  --color-gray-400: oklch(0.7 0 0);
-  --color-gray-500: oklch(0.5 0 0);
-  --color-gray-600: oklch(0.4 0 0);
-  --color-gray-700: oklch(0.35 0 0);
-  --color-gray-800: oklch(0.3 0 0);
-  --color-gray-900: oklch(0.18 0 0);
-  --color-black: oklch(0 0 0);
-  
-  --color-brand-red: oklch(0.63 0.25 29);
-  --color-status-green: oklch(0.87 0.29 142);
-
-  /* Semantic Tokens (Light) */
-  --bg-color: var(--color-gray-100);
-  --text-color: var(--color-gray-900);
-  --accent-color: var(--color-brand-red);
-  
-  --surface-default: var(--color-white);
-  --surface-alt: var(--color-gray-200);
-  --surface-placeholder: var(--color-gray-800);
-  
-  --text-inverse: var(--color-white);
-  --text-muted: var(--color-gray-600);
-  
-  --status-indicator: var(--color-status-green);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: var(--color-black);
-    --text-color: var(--color-gray-200);
-    
-    --surface-default: var(--color-gray-900);
-    --surface-alt: var(--color-gray-800);
-    --surface-placeholder: var(--color-gray-800);
-    
-    --text-inverse: var(--color-white);
-    --text-muted: var(--color-gray-400);
-  }
+  --bg-color: #f4f4f4;
+  --text-color: #111111;
+  --accent-color: #ff0000;
+  --dark-bg: #1a1a1a;
+  --dark-text: #e0e0e0;
 }
 
 html {
@@ -561,6 +523,31 @@ nav a:hover {
 .about-skills li::before {
     content: "— ";
     color: var(--accent-color);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+.skill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: var(--bg-color);
+    border: 3px solid var(--text-color);
+    box-shadow: 3px 3px 0 var(--text-color);
+    font-size: 24px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+.skill-icon:hover {
+    transform: translate(-2px, -2px) scale(1.1);
+    box-shadow: 5px 5px 0 var(--text-color);
 }
 
 @media (max-width: 900px) {
