@@ -56,7 +56,7 @@ const translations = {
         info_loc_label: "ที่อยู่",
         info_loc_val: "กรุงเทพมหานคร TH",
         info_status_label: "สถานะการรับงาน",
-        info_status_val: "เปิดรับงานเต็มเวลา ฝึกงาน และฟรีแลนซ์",
+        info_status_val: "เปิดรับงานเต็มเวลา และฟรีแลนซ์",
         info_time_label: "เวลาตอบกลับ",
         info_time_val: "โดยปกติภายใน 24 ชั่วโมง",
         footer_built: "สร้างด้วย <span class='heart'>♥</span> - กรุงเทพฯ",
@@ -172,7 +172,7 @@ window.openImageViewer = function (imageList, startIndex = 0, event = null) {
 
     currentImageList = imageList;
     currentImageIndex = startIndex;
-    
+
     let targetImg = null;
     if (event && event.currentTarget) {
         targetImg = event.currentTarget.querySelector('img');
@@ -212,12 +212,12 @@ window.closeImageViewer = function (e) {
     if (document.startViewTransition) {
         const currentSrc = currentImageList[currentImageIndex];
         const targetImg = document.querySelector(`img[src$="${currentSrc.split('/').pop()}"]:not(#viewerImage)`);
-        
+
         if (targetImg) targetImg.style.viewTransitionName = 'project-image-transition';
         if (viewerImage) viewerImage.style.viewTransitionName = 'project-image-transition';
-        
+
         const transition = document.startViewTransition(() => closeModal());
-        
+
         transition.finished.then(() => {
             if (targetImg) targetImg.style.viewTransitionName = '';
             if (viewerImage) viewerImage.style.viewTransitionName = '';
@@ -309,7 +309,7 @@ function resetAIChat() {
             parts: [{ text: "รับทราบครับ ผมจะทำหน้าที่เป็นผู้ช่วย AI ของคุณศุภกร และพร้อมตอบคำถามทุกอย่างครับ" }]
         }
     ];
-    
+
     const chatBody = document.getElementById('ai-chat-messages');
     chatBody.innerHTML = `
         <div class="ai-message ai-system">
