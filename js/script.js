@@ -12,7 +12,7 @@ const translations = {
         hero_subtitle: "นักพัฒนา FULL STACK",
 
         about_title: "เกี่ยวกับฉัน",
-        about_text: "ผมเป็นนักศึกษาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา จะจบการศึกษาในปี 2026 มีความสนใจด้าน Software Engineering และ UX/UI Design มุ่งมั่นพัฒนาซอฟต์แวร์ที่ใช้งานง่ายและมีประสิทธิภาพ",
+        about_text: "ผมเป็นบัณฑิตวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา จบการศึกษาในปี 2026 มีความสนใจด้าน Software Engineering และ UX/UI Design มุ่งมั่นพัฒนาซอฟต์แวร์ที่ใช้งานง่ายและมีประสิทธิภาพ",
         skills_soft_title: "SOFT SKILLS (ทักษะด้านอารมณ์และสังคม)",
         skills_hard_title: "HARD SKILLS (ทักษะความเชี่ยวชาญ)",
         skill_soft_1: "การแก้ปัญหา (PROBLEM SOLVING)",
@@ -78,7 +78,7 @@ const translations = {
         hero_subtitle: "FULL STACK DEVELOPER",
 
         about_title: "ABOUT ME",
-        about_text: "I am a Computer Engineering student at Kasetsart University, Sriracha Campus, graduating in 2026. I am passionate about Software Engineering and UX/UI Design, striving to build efficient and user-friendly software.",
+        about_text: "I am a Computer Engineering graduate from Kasetsart University, Sriracha Campus, graduated in 2026. I am passionate about Software Engineering and UX/UI Design, striving to build efficient and user-friendly software.",
         skills_soft_title: "SOFT SKILLS",
         skills_hard_title: "HARD SKILLS",
         skill_soft_1: "PROBLEM SOLVING",
