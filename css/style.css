@@ -532,6 +532,7 @@ nav a:hover {
     margin-top: 16px;
 }
 .skill-icon {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -548,6 +549,32 @@ nav a:hover {
 .skill-icon:hover {
     transform: translate(-2px, -2px) scale(1.1);
     box-shadow: 5px 5px 0 var(--text-color);
+}
+
+.skill-icon::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+    box-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.skill-icon:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
 }
 
 @media (max-width: 900px) {
