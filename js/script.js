@@ -45,6 +45,7 @@ const translations = {
         btn_view_imgs: "ดูรูปภาพ",
         btn_download_game: "ดาวน์โหลดเกม (2d.rar) ↓",
         btn_view_proto: "ดูต้นแบบ (Figma)",
+        btn_download_resume: "ดาวน์โหลดเรซูเม่ (PDF) ↓",
 
         achieve_headline: "ใบรับรองและกิจกรรม",
         achieve_1: "ดูใบรับรอง",
@@ -111,6 +112,7 @@ const translations = {
         btn_view_imgs: "VIEW IMAGES",
         btn_download_game: "DOWNLOAD GAME (2d.rar) ↓",
         btn_view_proto: "VIEW PROTOTYPE (Figma)",
+        btn_download_resume: "DOWNLOAD RESUME (PDF) ↓",
 
         achieve_headline: "CERTIFICATES & ACTIVITIES",
         achieve_1: "VIEW CERTIFICATE",
