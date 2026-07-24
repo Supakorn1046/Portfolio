@@ -1183,8 +1183,7 @@ nav a:hover {
     
     header {
         padding: 16px;
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: row;
     }
     nav {
         justify-content: center;
@@ -1292,4 +1291,75 @@ nav a:hover {
   animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+/* --- Mobile Navigation --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger span {
+  width: 28px;
+  height: 4px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 16px 24px;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    border-bottom: 0px solid var(--text-color);
+  }
+  
+  nav.active {
+    max-height: 400px;
+    padding: 24px 0;
+    border-bottom: 4px solid var(--text-color);
+    box-shadow: 0 8px 0 var(--accent-color);
+  }
+
+  nav a {
+    width: 100%;
+    text-align: left;
+    margin: 4px 0;
+    padding-left: 24px;
+    box-sizing: border-box;
+  }
+  
+  nav button#langToggleBtn {
+    margin: 8px 0 0 24px;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
 
